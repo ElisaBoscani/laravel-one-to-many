@@ -40,6 +40,9 @@
               N/A
               @endif
             </div>
+            <span>
+              {{$project->type->name }}
+          </span>
           </div>
         </div>
       </div>

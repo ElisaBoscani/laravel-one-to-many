@@ -29,6 +29,24 @@
       </div>
       @enderror
     </div>
+        {{-- type --}}
+        <label for="type_id" class="form-label">Type</label>
+        <select class="form-select form-select-lg mb-3 @error('type_id') is-invalid @enderror" name=" type_id" id="type_id" aria-label="Large select example" value="{{$project->type_id}}">
+          <option selected disabled>Select Type</option>
+          <option value="">None of these</option>
+          @foreach($types as $type)
+          <option value="{{$type->id}}">{{$type->name}}</option>
+          @endforeach
+          @error('type_id')
+          <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <i class="fa-solid fa-triangle-exclamation fa-xl" style="color: #ff0f0f;"></i>
+            <span>
+              Name, Error: {{$message}}
+            </span>
+          </div>
+          @enderror
+        
+        </select>
     <!-- url git -->
     <div>
       <label for="url_git" class="form-label">Url Git</label>

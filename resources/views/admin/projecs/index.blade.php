@@ -15,6 +15,7 @@
         <th>Title</th>
         <th>Content</th>
         <th>Image</th>
+        <th>Type</th>
         <th>Url Git</th>
         <th>Url View</th>
         <th>Action</th>
@@ -45,6 +46,14 @@
           @else
           N/A
           @endif
+        </td>
+        <td>
+          @if($projec->type)
+         <p> {{ $projec->type->name }}</p>
+         @else
+         N/A
+          @endif
+
         </td>
         <td>
           @if($projec->url_git)

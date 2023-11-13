@@ -28,6 +28,7 @@ class UpdateProjectRequest extends FormRequest
             'cover_image' => 'nullable|max:255',
             'url_git' => 'required|nullable',
             'url_view' => 'nullable',
+            'type_id' => 'required|nullable'
         ];
     }
     public function messages()
@@ -36,6 +37,7 @@ class UpdateProjectRequest extends FormRequest
             'title.required' => 'Title is required.',
             'content.required' => 'Description is required',
             'url_git.require' => 'url in required',
+            'type_id' => 'Select type'
 
         ];
     }
